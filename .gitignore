@@ -1,0 +1,21 @@
+# Ignore environment file
+.env
+
+# Python cache / compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+.venv/
+env/
+
+# VS Code settings
+.vscode/
+
+# Playwright output
+allure-results/
+allure-report/
+test-results/
+playwright-report/

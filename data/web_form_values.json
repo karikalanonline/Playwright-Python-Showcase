@@ -1,0 +1,22 @@
+[
+  {
+    "tc_id": "TC-100001",
+    "requestor_type": "Myself",
+    "category": "Visa Application",
+    "subcategory_1": "Case Status"
+  },
+  {
+    "tc_id": "TC-100002",
+    "requestor_type": "Myself",
+    "category": "Travel Inquiry",
+    "subcategory_1": "General Inquiry",
+    "permiso_online_assessment": "No",
+    "country_of_travel_1": "Australia",
+    "country_of_travel_2": "Austria",
+    "country_of_travel_3": "Belarus",
+    "upcoming_travel_start": "+7",
+    "upcoming_travel_end": "+14"
+  }
+]
+
+

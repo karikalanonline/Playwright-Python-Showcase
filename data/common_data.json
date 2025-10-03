@@ -1,0 +1,13 @@
+{
+  "Business_user_name_1": "Test Business User1",
+  "non_us_outbound_team_member": "Test User",
+  "name": "John Doe",
+  "email": "johndoe@example.com",
+  "list_view_name": {
+    "Open Cases": "Open Cases",
+    "General Inquiries": "General Inquiries",
+    "Master Case List": "Master Case List",
+    "All": "All",
+    "Closed Inquiries": "Closed Inquiries"
+  }
+}

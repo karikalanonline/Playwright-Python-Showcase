@@ -1,0 +1,9 @@
+{
+  "TC-100001": {
+    "Source": "Form",
+    "Category": "Visa Application",
+    "SubCategory 1": "Case Status",
+    "Owner": "Global Queue",
+    "Case Status": "New"
+  }
+}
