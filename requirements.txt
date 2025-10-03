@@ -1,0 +1,19 @@
+# Core test runner & Playwright
+playwright==1.54.0
+pytest==8.4.1
+pytest-playwright==0.7.0
+
+# Reporting & CI helpers
+pytest-html==4.1.1
+allure-pytest==2.15.0
+
+# Useful pytest plugins you have installed
+pytest-base-url==2.1.0
+pytest-dependency==0.6.0
+
+# Config & utilities
+python-dotenv==1.1.1
+requests==2.32.4
+
+# Optional / quality tools (include if you use them in CI)
+black==25.1.0
