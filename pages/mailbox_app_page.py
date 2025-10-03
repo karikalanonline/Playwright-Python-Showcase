@@ -10,7 +10,6 @@ class MailboxApp(BasePage):
     def __init__(self, page):
         super().__init__(page)
         self.sf_home = SalesforceHomePage(page)
-        # Generic app/webform names (safe)
         self.webform_locator = (
             "p[class='slds-truncate']:has-text('Demo Mailbox WebForm')"
         )
@@ -26,5 +25,4 @@ class MailboxApp(BasePage):
 
     def click_mailbox_sync_tab(self):
         self.click_element(self.mailbox_sync_tab)
-        self.page.wait_for_timeout(4000)
         return MailboxSyncHomePage(self.page)

@@ -25,6 +25,6 @@ def test_select_open_cases_from_common(select_list_view, common_data):
 
 
 # Example of parametrizing across multiple list views
-# @pytest.mark.parametrize("list_view", ["All", "Open Cases"])
-# def test_list_view_variants(select_list_view_factory, list_view):
-#     select_list_view_factory(list_view)
+@pytest.mark.parametrize("list_view", ["All", "Open Cases"])
+def test_list_view_variants(select_list_view_factory, list_view):
+    select_list_view_factory(list_view)

@@ -5,7 +5,6 @@ from playwright.sync_api import Page, expect
 from base.base_page import BasePage
 from data import test_data
 from utils.logger import logger
-from utils import date_utils
 
 
 class WebFormHomePage(BasePage):
@@ -125,7 +124,6 @@ class WebFormHomePage(BasePage):
         print("Full success message:", success_message)
         assert "Thank you for your inquiry" in success_message
 
-        # Generic ticket-id regex: matches any PREFIX-1234 style id (keeps verification, avoids hard-coding 'IXT-')
         match = re.search(r"\b([A-Z]{1,6}-\d+)\b", success_message)
         assert match is not None, "Inquiry number not present in the success message"
         self.inquiry_number = match.group(1)
@@ -140,7 +138,6 @@ class WebFormHomePage(BasePage):
             self.page.go_back()
 
     def fill_form(self, data: dict):
-        # uses sanitized keys from your test data
         self.assert_name(test_data.name)
         self.assert_email(test_data.email)
         self.click_dropdown("Requestor Type")

@@ -44,11 +44,6 @@ class BasePage:
         expect(locator).to_be_visible()
         self.retry_action(lambda: locator.click())
 
-    # def fill(self, selector: str, value):
-    #     if isinstance(value, (date, datetime)):
-    #         value = value.strftime("%Y-%m-%d")
-    #     self.page.fill(selector, str(value))
-
     def fill(self, selector: str, value):
         if isinstance(value, (date, datetime)):
             value = value.strftime("%Y-%m-%d")
@@ -86,23 +81,3 @@ class BasePage:
         logger.info("Clicking the app launcher icon")
         expect(self.page.locator(self.app_launcher_icon)).to_be_visible(timeout=8000)
         self.page.locator(self.app_launcher_icon).click()
-
-    # def click_app_launcher(self):
-    #     # debug print is optional but helpful during verification
-    #     try:
-    #         print(
-    #             "DEBUG: clicking app launcher on page id",
-    #             id(self.page),
-    #             "url",
-    #             self.page.url,
-    #         )
-    #     except Exception:
-    #         pass
-
-    #     # use the exact selector your app needs
-    #     self.page.locator(
-    #         "button[aria-label='App Launcher'], button[title='App Launcher']"
-    #     ).click()
-
-    # optionally wait for the launcher modal / grid to appear
-    # self.page.locator("div[role='dialog'] >> text=All Apps").wait_for(state="visible", timeout=8000)

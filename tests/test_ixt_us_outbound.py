@@ -7,23 +7,6 @@ with open("data/web_form_values.json") as f:
     case_details = json.load(f)
 
 
-# Example of webform submission test
-# @pytest.mark.dependency(name="submit form")
-# def test_submit_webform(get_inquiry_number):
-#     assert get_inquiry_number is not None
-
-
-# Example of verifying case details with dependency
-# @pytest.mark.dependency(depends=["submit form"])
-# @pytest.mark.parametrize("expected", [case_details["TC-00001"]])
-# def test_verify_case_details(
-#     mailbox_record_page: MailboxSyncRecordPage, expected
-# ):
-#     mailbox_record_page.assert_case_details(expected)
-#     custom_email_page = mailbox_record_page.click_email_link()
-#     custom_email_page.assert_email_status(expected="Sent")
-
-
 def test_default_user_login(proxy_user_login):
     """
     Verify that the default user can log in and see the App Launcher.

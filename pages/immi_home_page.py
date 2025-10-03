@@ -10,7 +10,6 @@ class ImmigrationHomePage(BasePage):
         # Kept generic name, safe for public repo
         self.immigration_name = "th[data-label='Record Name']"
 
-    # Example method kept intact, but record_id placeholder changed to a dummy
     # def click_immigration_record(
     #     self, record_id: str = "I-10001", timeout: int = 30_000
     # ):

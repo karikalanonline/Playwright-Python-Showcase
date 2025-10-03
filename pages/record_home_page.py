@@ -8,7 +8,6 @@ from data import test_data
 class RecordHomePage(BasePage):
     def __init__(self, page: Page):
         super().__init__(page)
-        # Generic field selectors (renamed, but logic same)
         self.generic_field_1 = (
             "div div div span[class='test-id__field-label']:has-text('Nominee Field')"
         )

@@ -1,14 +1,14 @@
 from base.base_page import BasePage
 from playwright.sync_api import Page, expect, TimeoutError as PWTimeoutError
 from utils.logger import logger
-from pages.record_home_page import RecordHomePage  # renamed from ImmigrationHomePage
+from pages.record_home_page import RecordHomePage
 from pages.salesforce_admin_page import SalesforceAdminPage
-from pages.mailbox_sync_home_page import MailboxSyncHomePage
+from pages.mailbox_home_page import MailboxSyncHomePage
 
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
-    from pages.mailbox_app_page import MailboxApp  # renamed from IxtMailboxApp
+    from pages.mailbox_app_page import MailboxApp
 
 
 class SalesforceHomePage(BasePage):
@@ -25,12 +25,11 @@ class SalesforceHomePage(BasePage):
         self.switch_to_lightning_link = (
             "div.navLinks div.linkElements a.switch-to-lightning"
         )
-        # Sanitized: generic app/module names
         self.demo_module = ":text-is('Demo Module')"
         self.mailbox_app = "p[class='slds-truncate']:has-text('Demo Mailbox App')"
         self.gear_icon = "div.setupGear"
         self.setup_option = "#related_setup_app_home"
-        self.mailbox_sync_tab = "#Demo_Mailbox_Sync__c"  # sanitized id
+        self.mailbox_sync_tab = "#Demo_Mailbox_Sync__c"
 
     def switch_to_lightning(self):
         logger.info("Attempting to switch to Lightning...")

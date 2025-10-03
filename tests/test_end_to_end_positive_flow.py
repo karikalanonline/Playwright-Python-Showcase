@@ -3,7 +3,7 @@ from playwright.sync_api import expect, Page
 
 from utils import config, report_helper
 from data import test_data
-from pages.record_home_page import RecordHomePage  # renamed from ImmigrationHomePage
+from pages.record_home_page import RecordHomePage
 
 
 # @pytest.mark.e2e

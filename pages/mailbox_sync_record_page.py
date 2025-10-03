@@ -4,7 +4,7 @@ import logging, allure
 from base.base_page import BasePage
 
 # if TYPE_CHECKING:
-from pages.custom_email_page import CustomEmailPage  # sanitized file/class name
+from pages.custom_email_page import CustomEmailPage
 
 logger = logging.getLogger(__name__)
 
@@ -111,7 +111,6 @@ class MailboxSyncRecordPage(BasePage):
     def click_email_link(self, timeout: int = 20_000) -> CustomEmailPage:
         self.page.locator(self.email_link, has_text="EMAIL").click()
 
-        # Sanitize: generic object name instead of Custom_Email_2__c
         pattern = re.compile(r".*/lightning/r/Email__c/.*")
         try:
             self.page.wait_for_url(pattern, timeout=8_000)

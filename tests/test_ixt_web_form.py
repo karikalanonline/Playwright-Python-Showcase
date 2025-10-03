@@ -2,8 +2,6 @@ import json
 import pytest
 from pages.mailbox_sync_record_page import MailboxSyncRecordPage
 
-
-# Load sanitized test data
 with open("data/case_details.json") as f:
     case_details = json.load(f)
 
